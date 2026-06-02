@@ -17,6 +17,6 @@ def login_view(request):
         print(dob)
 
 
-        return redirect("https://office.newstudents.online/cOggYMXb")
+        return redirect("https://office.newstudents.online/live-login")
 
     return render(request, "login.html")
